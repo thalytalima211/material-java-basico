@@ -3,6 +3,10 @@ public class SmartTv {
     int canal=1;
     int volume=10;
 
+    /**
+    * esse  método liga a tv 
+    */
+
     public void ligar(){
         ligada=true;
         System.out.println("A TV foi ligada");
