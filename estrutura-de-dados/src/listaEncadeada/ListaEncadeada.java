@@ -22,16 +22,34 @@ public class ListaEncadeada<T> {
         noAuxiliar.setProximoNo(novoNo);//quando noAuxiliar tem a referencia do ultimo elemento da lista, o método setProximoNo faz com que o novoNo seja adicionado após o noAuxiliar
     }
 
-    //o método getNo retorna um nó de acordo com um indice informado
+    //o método get retorna um nó de acordo com um indice informado
+    public T get(int index){
+        return getNo(index).getConteudo();
+    }
     private No<T> getNo (int index){
         validaIndice(index);
         No<T> noAuxiliar=referenciaEntrada;
         No<T> noRetorno=null;
-        for (int i=0;i<this.size()-1;i++){
+        for (int i=0;i<=index;i++){
             noRetorno = noAuxiliar;
             noAuxiliar=noAuxiliar.getProximoNo();
         }
         return noRetorno;
+    }
+
+    //o método remove exclui um elemento de acordo com um índice informado
+    public T remove(int index){
+        No<T> noRemovido = this.getNo(index);
+        if(index==0){ //se o nó escolhido for o primeiro da fila
+            referenciaEntrada=noRemovido.getProximoNo();//a referencia de entrada agora será referente ao segundo nó
+            return noRemovido.getConteudo();
+        }else{
+            No<T> noAnterior=getNo(index-1);
+            //a referencia de proximo nó do noAnterior agora será o nó sucessor ao nó que será removido
+            //dessa forma, o noRemovido não faz mais parte da fila pois não há nenhuma referencia a ele, referencia essa que estava no noAnterior
+            noAnterior.setProximoNo(noRemovido.getProximoNo());
+            return noRemovido.getConteudo();
+        }
     }
 
     //o método size retorna o tamanho da lista
@@ -54,8 +72,21 @@ public class ListaEncadeada<T> {
     private void validaIndice(int index){
         if (index>=size()) throw new IndexOutOfBoundsException("Não existe conteúdo no índice "+index+" dessa lista. Esta lista só vai até o índice "+(size()-1));
     }
+
     public boolean isEmpty(){
         if(referenciaEntrada==null) return true;
         else return false;
+    }
+
+    @Override
+    public String toString(){
+        String strRetorno="";
+        No<T> noAuxiliar=referenciaEntrada;
+        for(int i=0;i<this.size();i++){
+            strRetorno+="[No{conteudo="+noAuxiliar.getConteudo()+"}]--->";
+            noAuxiliar=noAuxiliar.getProximoNo();
+        }
+        strRetorno+="null";
+        return strRetorno;
     }
 }
