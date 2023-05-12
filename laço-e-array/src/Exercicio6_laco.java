@@ -1,3 +1,4 @@
+/*Exercício: Crie um código que imprima o fatorial de um número N natural */
 import java.util.Scanner;
 
 public class Exercicio6_laco {

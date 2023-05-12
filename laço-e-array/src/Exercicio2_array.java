@@ -1,3 +1,4 @@
+/*Exercicio: Crie um código que leia 6 letras e retorne quais e quantas foram as consoantes digitadas*/
 import java.util.Scanner;
 public class Exercicio2_array {
     public static void main(String[] args) {

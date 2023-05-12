@@ -1,3 +1,4 @@
+/*Exercício: Crie um código que gere uma matriz 4x4 com números inteiros aleatórios maiores ou iguais a 9 */
 import java.util.Random;
 
 public class Exercicio4_array {

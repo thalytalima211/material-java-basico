@@ -1,3 +1,4 @@
+/*Exercício: Crie um laço que recebe o nome e a idade de uma pessoa. Esse laço encerra quando o campo Nome recebe o valor 0 */
 import java.util.Scanner;
 
 public class Exercicio1_laco {
