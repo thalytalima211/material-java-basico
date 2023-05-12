@@ -1,4 +1,5 @@
 /*Exercício: Crie um código que imprima um array com 20 números aleatórios menores que 100 */
+
 import java.util.Random;
 
 public class Exercicio3_array {

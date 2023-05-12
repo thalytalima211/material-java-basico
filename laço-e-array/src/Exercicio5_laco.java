@@ -1,4 +1,5 @@
 /*Exercício: Crie um código que gere a tabuada de um número N inteiro */
+
 import java.util.Scanner;
 
 public class Exercicio5_laco {

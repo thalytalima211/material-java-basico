@@ -1,4 +1,5 @@
 /*Exercício: Crie um programa em Java que leia um vetor e imprima a ele e seu inverso */
+
 import java.util.Scanner;
 
 public class Exercicio1_array {

@@ -1,4 +1,5 @@
 /*Exercício: Crie um código que leia 5 números inteiros e imprima o maior deles e a media de todos */
+
 import java.util.Scanner;
 
 public class Exercício3_laco {

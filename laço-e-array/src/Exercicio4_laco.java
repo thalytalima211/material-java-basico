@@ -1,4 +1,5 @@
 /*Exercício: Crie um código que leia uma quantidade N inteira de números e imprima a quantidade números ímpares e pares */
+
 import java.util.Scanner;
 
 public class Exercicio4_laco {
