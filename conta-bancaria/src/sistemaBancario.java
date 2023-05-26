@@ -11,7 +11,7 @@ public class sistemaBancario{
     public void criaConta(String nomeCliente, String cpfCliente){
         this.cliente = nomeCliente;
         this.cpf = cpfCliente;;
-        this.agencia = aleatorio.nextInt(1000);
+        this.agencia = aleatorio.nextInt(9999-1000+1)+1000;
         int inicioConta = aleatorio.nextInt(9999), digito=aleatorio.nextInt(9);
         this.conta = inicioConta + "-" + digito;
     }
