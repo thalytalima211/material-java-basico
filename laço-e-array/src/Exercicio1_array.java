@@ -4,13 +4,20 @@ import java.util.Scanner;
 
 public class Exercicio1_array {
     public static void main(String[] args) {
-        int[] vetor = {-5,0,5,10,15,20}; /*voltar quando souber fazer o input aqui */
-        int comprimento = vetor.length-1;
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Digite a quantidade de elementos desejada no vetor: ");
+        int comprimento = scan.nextInt();
+        int[] vetor = new int[comprimento];
+
+        for(int i = 0; i < comprimento; i++){
+            System.out.printf("Digite o %dº elemento: ", i +1);
+            vetor[i] = scan.nextInt();
+        }
         
         System.out.print("Vetor:");
-        for (int i=0;i<=comprimento;i++) System.out.print(" "+vetor[i]+" ");
-
+        for (int i = 0; i < comprimento; i++) System.out.print(" " + vetor[i] + " ");
+ 
         System.out.print("\nVetor inverso:");
-        for (int i=comprimento; i>=0; i--) System.out.print(" "+vetor[i]+" ");
+        for (int i = comprimento - 1; i >= 0; i--) System.out.print(" " + vetor[i] + " ");
     }
 }
