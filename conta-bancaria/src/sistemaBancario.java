@@ -12,7 +12,7 @@ public class sistemaBancario{
         this.cliente = nomeCliente;
         this.cpf = cpfCliente;;
         this.agencia = aleatorio.nextInt(9999-1000+1)+1000;
-        int inicioConta = aleatorio.nextInt(9999), digito=aleatorio.nextInt(9);
+        int inicioConta = aleatorio.nextInt(99999-10000+1)+10000, digito=aleatorio.nextInt(9);
         this.conta = inicioConta + "-" + digito;
     }
 
