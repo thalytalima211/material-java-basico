@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class terminal {
     public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
-        sistemaBancario cliente = new sistemaBancario();
 
         System.out.println("Olá, seja bem-vindo ao New Bank!");
         System.out.print("Para começar, por favor insira seu primeiro nome: ");
@@ -13,7 +12,7 @@ public class terminal {
         String cpf = scan.next();
 
         System.out.println("\nInicializando sua conta...\n");
-        cliente.criaConta(nome, cpf);
+        sistemaBancario cliente = new sistemaBancario(nome, cpf);
 
         while(true){
             System.out.printf("Olá %s!\n", nome);

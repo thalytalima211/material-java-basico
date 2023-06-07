@@ -2,18 +2,18 @@ import java.util.Random;
 
 public class sistemaBancario{
     Random aleatorio = new Random();
-    String cliente = null;
-    String cpf;
-    int agencia;
-    String conta = null;
-    double saldo = 0;
+    private String cliente = null;
+    private String cpf;
+    private int agencia;
+    private String conta = null;
+    private double saldo = 0;
 
-    public void criaConta(String nomeCliente, String cpfCliente){
-        this.cliente = nomeCliente;
-        this.cpf = cpfCliente;;
-        this.agencia = aleatorio.nextInt(9999-1000+1)+1000;
-        int inicioConta = aleatorio.nextInt(99999-10000+1)+10000, digito=aleatorio.nextInt(9);
-        this.conta = inicioConta + "-" + digito;
+    public sistemaBancario(String nomeCliente, String cpfCliente){
+        cliente = nomeCliente;
+        cpf = cpfCliente;;
+        agencia = aleatorio.nextInt(9999-1000+1)+1000;
+        int inicioConta = aleatorio.nextInt(99999-10000+1)+10000, digito = aleatorio.nextInt(9);
+        conta = inicioConta + "-" + digito;
     }
 
     public void dadosConta(){

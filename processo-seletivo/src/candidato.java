@@ -1,6 +1,6 @@
 public class candidato implements Comparable<candidato> {
-    String nome;
-    int pretensaoSalarial;
+    private String nome;
+    private int pretensaoSalarial;
 
     public candidato(String nome, int pretensaoSalarial){
         this.nome = nome;

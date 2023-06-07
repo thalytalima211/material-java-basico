@@ -3,14 +3,14 @@ import java.util.Collections;
 import java.util.Random;
 
 public class processoSeletivo {
-    int quantidadeSelecionados;
-    int salarioPago;
-    ArrayList<candidato> entrevistados = new ArrayList<candidato>();
-    ArrayList<candidato> selecionados =  new ArrayList<candidato>();
-    ArrayList<candidato> listaDeEspera = new ArrayList<candidato>();
-    ArrayList<candidato> contratados = new ArrayList<candidato>();
+    private int quantidadeSelecionados;
+    private int salarioPago;
+    private ArrayList<candidato> entrevistados = new ArrayList<candidato>();
+    private ArrayList<candidato> selecionados =  new ArrayList<candidato>();
+    private ArrayList<candidato> listaDeEspera = new ArrayList<candidato>();
+    private ArrayList<candidato> contratados = new ArrayList<candidato>();
 
-    public void iniciaProcessoSeletivo(int quantidadeSelecionados, int salarioPago){
+    public processoSeletivo(int quantidadeSelecionados, int salarioPago){
         this.quantidadeSelecionados = quantidadeSelecionados;
         this.salarioPago = salarioPago;
     }
@@ -97,5 +97,9 @@ public class processoSeletivo {
 
     static boolean atender(){
         return new Random().nextInt(3) == 1;
+    }
+
+    public int quantidadeContratados(){
+        return contratados.size();
     }
 }

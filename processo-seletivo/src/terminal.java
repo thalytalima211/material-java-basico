@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class terminal {
     public static void main(String[] args) {
-        processoSeletivo selecao =  new processoSeletivo();
+
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Seja bem-vindo ao nosso sistema de seleção!");
@@ -13,11 +13,11 @@ public class terminal {
         int salarioPago = scan.nextInt();
 
 
-        selecao.iniciaProcessoSeletivo(quantidadeSelecionados, salarioPago);
+        processoSeletivo selecao = new processoSeletivo(quantidadeSelecionados, salarioPago);
         System.out.println("Processo seletivo inciado!");
         System.out.println("Lembrando que o critério para seleção dos candidatos é baseado em sua pretensão salarial.");
 
-        while(selecao.contratados.size() < quantidadeSelecionados){
+        while(selecao.quantidadeContratados() < quantidadeSelecionados){
             System.out.println("\nMENU:");
             System.out.println("1 - Adicionar candidato");
             System.out.println("2 - Ver entrevistados");
