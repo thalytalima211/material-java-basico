@@ -77,8 +77,10 @@ public class processoSeletivo {
                 System.out.printf("O candidato %s atendeu a ligação e foi contratado!\n", selecionados.get(0).getNome());
                 contratados.add(selecionados.get(0));
                 selecionados.remove(0);
-                selecionados.add(listaDeEspera.get(0));
-                listaDeEspera.remove(0);
+                if(listaDeEspera.size() > 0) {
+                    selecionados.add(listaDeEspera.get(0));
+                    listaDeEspera.remove(0);
+                }
             }else{
                 System.out.printf("O candidato %s não atendeu a ligação e foi desclassificado!", selecionados.get(0).getNome());
                 selecionados.remove(0);
