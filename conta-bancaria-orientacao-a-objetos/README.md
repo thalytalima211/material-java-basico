@@ -1,0 +1,2 @@
+## Conta Bancária (Orientação a Objetos)
+Esse projeto faz parte da formação Java Developer, da plataforma Digital Innovation One. O projeto exercita as principais características da orientação a objetos: abstração, polimorfismo, encapsulamento e herança, através de um projeto bancário simples mas prático. Nele, há a divisão de várias dependências entre classes (abstração), onde as características intrisecas a uma conta são herdadas da classe abstrata Conta e implementadas nas classes ContaPoupanca e ContaCorrente (herança e polimorfismo).
