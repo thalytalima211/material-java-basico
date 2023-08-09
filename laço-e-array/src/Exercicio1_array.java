@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Exercicio1_array {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.print("Digite a quantidade de elementos desejada no vetor: ");
+        System.out.print("Digite a quantidade de elementos desejada no vetor: ");lei
         int comprimento = scan.nextInt();
         int[] vetor = new int[comprimento];
 
